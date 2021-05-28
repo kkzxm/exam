@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.exam.mapper.OptionsMapper">
+    <resultMap id="options" type="com.ssm.exam.entity.Options">
+        <result property="topic.topicId" column="topic_id"/>
+    </resultMap>
+    <select id="selectByOnly" resultMap="options">
+        select * from options
+    </select>
+    <select id="selectById" resultMap="options">
+        select * from options where option_id = #{id}
+    </select>
+    <insert id="insertList">
+        insert into options(option_id,option_self, is_correct, topic_id, option_comment)
+        values
+        <foreach collection="list" item="option" separator=",">
+            (#{option.optionId},#{option.optionSelf},#{option.isCorrect},#{option.topic.topicId},#{option.optionComment})
+        </foreach>
+    </insert>
+    <insert id="insert">
+        insert into options(option_id,option_self, is_correct, topic_id, option_comment) value (#{optionId},#{optionSelf},#{isCorrect},#{topic.topicId},#{optionComment})
+    </insert>
+</mapper>

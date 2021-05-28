@@ -1,0 +1,97 @@
+<div class="layui-collapse" lay-accordion="" xmlns:th="http://www.thymeleaf.org">
+    <div class="layui-colla-item" th:each="entity:${page.records}" th:topicId="${entity?.topic?.topicId}">
+        <!--题目-->
+        <!--/*@thymesVar id="entity" type="com.ssm.exam.entity.choiceQuestion.SingleChoiceQuestion"*/-->
+        <p class="layui-colla-title h4" th:text="|题目: ${entity.topic.topicSelf}|"></p>
+        <!--选项-->
+        <div class="layui-colla-content">
+            <div>
+                <blockquote class="layui-elem-quote layui-quote-nm">
+                    [[${entity.topic.topicComment}]]
+                </blockquote>
+            </div>
+            <hr>
+            <div class="layui-tab" th:lay-filter="|optionInfo${entity?.topic?.topicId}|">
+                <ul class="layui-tab-title">
+                    <li th:each="option:${entity.optionsList}" th:class="${optionStat.count==1?'layui-this':''}"
+                        th:lay-id="${option?.optionId}">
+                        <span th:text="${option?.optionSelf}"></span>
+                        <i class="layui-icon layui-icon-close layui-unselect layui-tab-close"></i>
+                    </li>
+                </ul>
+                <div class="layui-tab-content">
+                    <div th:class="|layui-tab-item ${optionStat.count==1?'layui-show':''}|"
+                         th:each="option:${entity.optionsList}">
+                        <div class="layui-bg-gray">
+                            <div class="layui-card">
+                                <div class="layui-card-header">
+                                    <button type="button"
+                                            th:class="|layui-btn layui-btn-radius layui-btn-primary layui-border-${option.isCorrect==1?'blue':'red'}|"
+                                            th:text="|选项${option.isCorrect==1?'正确':'错误'}|">
+                                    </button>
+                                </div>
+                                <div class="layui-card-body" th:text="${option.optionComment}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--操作菜单-->
+            <div class="site-demo-button layerDemo">
+                <button class="layui-btn addOptionButton">添加新的选项</button>
+                <button class="layui-btn updateOptionButton">修改当前选项</button>
+                <button class="layui-btn updateTopicInfoButton">修改题目信息</button>
+                <button class="layui-btn layui-btn-danger deleteTopicButton">删除题目</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="include_DIV">
+    <!--添加选项-->
+    <div id="addOption_html">
+        <div style="width: 940px;overflow: hidden;margin: auto">
+            <div class="layui-form layui-form-pane row" style="width: 900px;margin: auto">
+                <div th:include="public/option_add.html"></div>
+            </div>
+        </div>
+    </div>
+    <!--当题目中一个选项都没有时-->
+    <div id="nothingnessOption">
+        <!--标题DOM-->
+        <div th:replace="public/title_nothingnessOption.html"></div>
+        <!--内容DOM-->
+        <div th:replace="public/content_nothingnessOption.html"></div>
+    </div>
+    <!--选项的信息(添加选项成功后,给addOptionAjaxAfter()函数调用的,用完需要初始化一下)-->
+    <div id="optionInfo">
+        <ul>
+            <li>
+                <span>这里填选项的Self信息</span>
+                <i class="layui-icon layui-icon-close layui-unselect layui-tab-close"></i>
+            </li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item">
+                <div class="layui-bg-gray">
+                    <div class="layui-card">
+                        <div class="layui-card-header">
+                            <button type="button" class="layui-btn layui-btn-radius layui-btn-primary">
+                                这里填选项是否正确,以及确定一下颜色
+                            </button>
+                        </div>
+                        <div class="layui-card-body">这里填写选项的备注信息</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--修改题目信息-->
+    <div id="updateTopicInfo">
+        <div style="width: 1000px;overflow: hidden;margin: auto">
+            <div class="layui-form layui-form-pane row" style="width: 940px;margin: auto">
+                <div th:include="public/topic_add.html"></div>
+            </div>
+        </div>
+    </div>
+</div>

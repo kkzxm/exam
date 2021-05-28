@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.exam.mapper.AnswerMapper">
+    <resultMap id="answer" type="com.ssm.exam.entity.Answer">
+        <result property="topic.topicId" column="topic_id"/>
+        <result property="topic.topicSelf" column="topic_self"/>
+        <result property="topic.topicType" column="topic_type"/>
+        <result property="topic.topicComment" column="topic_comment"/>
+    </resultMap>
+    <select id="selectByOnly" resultMap="answer">
+        select * from answer_info
+    </select>
+</mapper>

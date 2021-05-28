@@ -1,0 +1,16 @@
+<!--region 关于题目-->
+<div th:replace="public/topic_add.html"></div>
+<!--endregion-->
+
+<hr class="layui-border-blue">
+
+<!--region 关于选项-->
+<fieldset class="layui-elem-field" xmlns:th="http://www.thymeleaf.org">
+    <legend>选项相关</legend>
+    <div class="layui-field-box">
+        <th:block th:each="i:${#numbers.sequence(1, 4)}">
+            <div th:replace="public/option_add.html"></div>
+        </th:block>
+    </div>
+</fieldset>
+<!--endregion-->

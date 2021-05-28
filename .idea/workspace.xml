@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="AutomaticModuleUnloader">
+    <loaded-modules>
+      <module name="buffer" />
+      <module name="run" />
+      <module name="exam" />
+      <module name="root" />
+    </loaded-modules>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="149367c2-9b08-4082-b4d5-2327827c35de" name="默认变更列表" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="JavaScript File" />
+        <option value="MybatisMapper" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/run/src/main/java/com/ssm/RunApplication.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="1sKyaj7CvZfPZ8HGRVhDnMlxrNP" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DataGrid.QuickDoc.View" value="transposed" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.data.extractors.current.export.id" value="JSON-Groovy.json.groovy" />
+    <property name="database.data.extractors.current.id" value="JSON-Groovy.json.groovy" />
+    <property name="jdk.selected.JAVA_MODULE" value="adopt-openjdk-1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/run/src/main/resources/static/lib/less" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.30628273" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\LingDreamWorkspace\exam\run\src\main\resources\static\lib\less" />
+      <recent name="D:\LingDreamWorkspace\exam\run\src\main\resources\static\lib\bootstrap\3.4.1" />
+      <recent name="D:\LingDreamWorkspace\exam\run\src\main\resources\static\lib" />
+      <recent name="D:\LingDreamWorkspace\exam\run\src\main\resources\templates\before" />
+      <recent name="D:\LingDreamWorkspace\exam\aboutExam\src\main\resources\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\LingDreamWorkspace\exam\aboutExam\src\main\resources\templates\public" />
+      <recent name="D:\LingDreamWorkspace\exam\run\src\main\resources\static\lib" />
+      <recent name="D:\LingDreamWorkspace\exam\run\src\main\resources\static\admin\js" />
+      <recent name="D:\LingDreamWorkspace\exam\run\src\main\resources\static\lib\bootstrap\3.4.1" />
+      <recent name="D:\LingDreamWorkspace\exam\run\src\main\resources\static\admin\" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ssm.exam.mapper" />
+      <recent name="com.ssm.exam.controller" />
+      <recent name="com.ssm.exam.service" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="openRunningConfigInTab" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="exam" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="exam" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="run" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ssm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ssm.RunApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.RunApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="149367c2-9b08-4082-b4d5-2327827c35de" name="默认变更列表" comment="" />
+      <created>1620635641295</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620635641295</updated>
+      <workItem from="1620635643763" duration="1345000" />
+      <workItem from="1620637014732" duration="1321000" />
+      <workItem from="1620638537449" duration="3310000" />
+      <workItem from="1620693857370" duration="355000" />
+      <workItem from="1620700510727" duration="1000" />
+      <workItem from="1620710323247" duration="6545000" />
+      <workItem from="1620717460910" duration="3365000" />
+      <workItem from="1620721006557" duration="215000" />
+      <workItem from="1620721560079" duration="374000" />
+      <workItem from="1620721964459" duration="874000" />
+      <workItem from="1620722854636" duration="312000" />
+      <workItem from="1620723197785" duration="10000" />
+      <workItem from="1620723222951" duration="624000" />
+      <workItem from="1620723920100" duration="108000" />
+      <workItem from="1620724044447" duration="189000" />
+      <workItem from="1620724250306" duration="372000" />
+      <workItem from="1620724643630" duration="318000" />
+      <workItem from="1620725116078" duration="447000" />
+      <workItem from="1620778733551" duration="804000" />
+      <workItem from="1620779846348" duration="1727000" />
+      <workItem from="1620782297865" duration="9852000" />
+      <workItem from="1620792254204" duration="1171000" />
+      <workItem from="1620793450702" duration="8128000" />
+      <workItem from="1620804051339" duration="625000" />
+      <workItem from="1620804759979" duration="166000" />
+      <workItem from="1620804938314" duration="81000" />
+      <workItem from="1620805345330" duration="100000" />
+      <workItem from="1620805459851" duration="989000" />
+      <workItem from="1620806503461" duration="1761000" />
+      <workItem from="1620808703950" duration="16430000" />
+      <workItem from="1620865338898" duration="7809000" />
+      <workItem from="1620874914264" duration="4834000" />
+      <workItem from="1620881400125" duration="314000" />
+      <workItem from="1620881818512" duration="16015000" />
+      <workItem from="1620905530932" duration="1868000" />
+      <workItem from="1620909687248" duration="517000" />
+      <workItem from="1620910228524" duration="709000" />
+      <workItem from="1620911083972" duration="176000" />
+      <workItem from="1620911431050" duration="423000" />
+      <workItem from="1620912188689" duration="208000" />
+      <workItem from="1620912481006" duration="912000" />
+      <workItem from="1620913579663" duration="381000" />
+      <workItem from="1620951792365" duration="369000" />
+      <workItem from="1620952465156" duration="15353000" />
+      <workItem from="1620977050601" duration="8337000" />
+      <workItem from="1621060624661" duration="14526000" />
+      <workItem from="1621079861335" duration="4560000" />
+      <workItem from="1621085540323" duration="96000" />
+      <workItem from="1621085644531" duration="1149000" />
+      <workItem from="1621143407048" duration="1707000" />
+      <workItem from="1621145482473" duration="15401000" />
+      <workItem from="1621210934209" duration="25000" />
+      <workItem from="1621210984999" duration="39050000" />
+      <workItem from="1621297283255" duration="33823000" />
+      <workItem from="1621470151736" duration="19796000" />
+      <workItem from="1621500273846" duration="5000" />
+      <workItem from="1621556475366" duration="14565000" />
+      <workItem from="1621815731968" duration="62000" />
+      <workItem from="1621815812173" duration="7589000" />
+      <workItem from="1621823652406" duration="1775000" />
+      <workItem from="1621902313093" duration="3766000" />
+      <workItem from="1621924344566" duration="1848000" />
+      <workItem from="1621988860888" duration="1795000" />
+      <workItem from="1621992980895" duration="29062000" />
+      <workItem from="1622074933559" duration="1021000" />
+      <workItem from="1622075983284" duration="1041000" />
+      <workItem from="1622077049562" duration="1000" />
+      <workItem from="1622077426477" duration="15400000" />
+      <workItem from="1622102353069" duration="129000" />
+      <workItem from="1622102506003" duration="1776000" />
+      <workItem from="1622161369438" duration="11435000" />
+      <workItem from="1622174138173" duration="305000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

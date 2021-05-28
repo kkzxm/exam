@@ -1,0 +1,21 @@
+<div class="layui-collapse" lay-accordion=""  xmlns:th="http://www.thymeleaf.org">
+    <div class="layui-colla-item"  th:each="entity:${page.records}">
+        <!--/*@thymesVar id="page" type="com.lingDream.tool.MyPage"*/-->
+        <!--/*@thymesVar id="entity" type="com.ssm.exam.entity.Answer"*/-->
+        <h2 class="layui-colla-title"  th:text="|题目: ${entity.topic?.topicSelf}|"></h2>
+        <div class="layui-colla-content layui-show">
+            <div class="layui-collapse">
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title" th:text="${entity.answerSelf}"></h2>
+                    <div class="layui-colla-content layui-show">
+                        <div class="layui-collapse">
+                            <div class="layui-colla-item">
+                                <div class="layui-colla-content layui-show" th:text="${entity.answerComment}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

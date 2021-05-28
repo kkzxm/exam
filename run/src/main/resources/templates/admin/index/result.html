@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:replace="admin/adminPublic/headerLinks.html"/>
+    <link th:href="@{/admin/css/style.css}" type="text/css" rel="stylesheet">
+    <title>添加结果</title>
+</head>
+<body>
+<div class="one">
+    <!-- #region Two -->
+    <div class="two">
+        <!-- #region 提示文字 -->
+        <div class="tx">
+            <p>
+                <span th:text="${result}" style="font-size: 40px">动态-成功or失败</span>
+            </p>
+        </div>
+        <!-- #endregion 提示文字-->
+        <div class="wi"></div>
+        <!-- #region but -->
+        <div class="but_left">
+            <button class="button" style="vertical-align:middle"><span><a
+                    th:href="|@{/}${toPage}/toInsertPage|">返回添加页面</a> </span></button>
+        </div>
+        <div class="but_right">
+            <button class="button" style="vertical-align:middle"><span><a th:href="|@{/}${toPage}/getPage?thisPage=1|">返回列表页</a> </span>
+            </button>
+        </div>
+    </div>
+    <!-- #endregion but-->
+</div>
+<!-- #endregion Two -->
+</body>
+</html>

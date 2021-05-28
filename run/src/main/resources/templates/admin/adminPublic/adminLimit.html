@@ -1,0 +1,23 @@
+<!--分页-->
+<div id="pageDiv"></div>
+<script>
+    let curr = [[${page.current}]];
+    let count = [[${page.total}]];
+
+    layui.use(['laypage', 'layer'], function(){
+        let layPage = layui.laypage
+            ,layer = layui.layer;
+
+        layPage.render({
+            elem: 'pageDiv'
+            , count: count
+            , curr: curr
+            , layout: ['count', 'prev', 'page', 'next', 'skip']
+            , jump: function (obj, first) {
+                if (!first) {
+                    location.href = "[[|@{/}${limitPath}|]]=" + obj.curr;
+                }
+            }
+        });
+    });
+</script>

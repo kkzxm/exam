@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.exam.mapper.TopicMapper">
+    <resultMap id="topic" type="com.ssm.exam.entity.Topic">
+        <result property="topicId" column="topic_id"/>
+        <result property="topicSelf" column="topic_self"/>
+        <result property="topicType" column="topic_type"/>
+        <result property="topicComment" column="topic_comment"/>
+    </resultMap>
+    <select id="selectByOnly" resultMap="topic">
+        select * from topic where topic_self = #{topicSelf}
+    </select>
+</mapper>

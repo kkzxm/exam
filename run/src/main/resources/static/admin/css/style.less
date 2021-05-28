@@ -1,0 +1,321 @@
+/*region 移动端 */
+@media screen and (max-width: 768px) {
+  .layui-layout-admin .layui-layout-left,
+  .layui-layout-admin .layui-body,
+  .layui-layout-admin .layui-footer {
+    left: 0;
+  }
+
+  .layui-layout-admin .layui-side {
+    left: -300px;
+  }
+}
+
+/*endregion*/
+
+/*region 变量仓库*/
+@color: #1aa094;
+@leftWidth: 150px;
+/*endregion*/
+
+/*region layui优化*/
+.layui-elem-field {
+  border-color: @color;
+}
+
+
+.layui-tab-title {
+  border-bottom: 0;
+
+  li {
+    border-bottom: 2px solid @color;
+  }
+
+  .layui-this {
+    border: #1aa094 2px solid;
+    border-bottom: 0;
+  }
+}
+
+/*endregion*/
+
+/*region 公共样式*/
+html, body, #app, .main, .right {
+  height: 100vh;
+}
+
+body {
+  background-color: rgba(238, 238, 238, 0.2);
+}
+
+a {
+  color: @color;
+
+  :hover {
+    color: #333;
+  }
+}
+
+.cl {
+  zoom: 1;
+
+  :after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+  }
+}
+
+
+.l {
+  float: left
+}
+
+.r {
+  float: right
+}
+
+.p20 {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.foo, .foo {
+  color: #f00;
+}
+
+/*endregion*/
+
+/*region 滚动条*/
+::-webkit-scrollbar-corner {
+  background: @color;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: @color;
+
+  :window-inactive {
+    background: @color
+  }
+}
+
+/*endregion*/
+
+/*region 顶栏*/
+header {
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #eee;
+  position: fixed;
+  z-index: 1001;
+  color: #333;
+
+  h1 {
+    height: 50px;
+    line-height: 50px;
+    width: @leftWidth;
+    display: block;
+    color: #FFF;
+    float: left;
+    background-color: #404852;
+    text-align: center;
+    font-size: 36px;
+  }
+
+  .breadcrumb {
+    margin-left: @leftWidth;
+    padding: 0 20px;
+
+    i {
+      float: left;
+    }
+
+    ul {
+      float: left;
+    }
+
+    li {
+      float: left;
+      margin: 0 3px;
+    }
+  }
+}
+
+/*endregion*/
+
+/*region 主要部分*/
+.main {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/*endregion*/
+
+/*region 左侧*/
+.left {
+  position: fixed;
+  top: 50px;
+  width: @leftWidth;
+  height: 100%;
+  background-color: #393D49;
+
+  ul {
+    width: @leftWidth;
+
+    .layui-nav-itemed :hover span {
+      color: turquoise;
+    }
+
+    li {
+      :hover span {
+        color: @color;
+      }
+
+      a, dl {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      dl {
+        dd {
+          padding-left: 2rem;
+          background-color: #282B33;
+        }
+      }
+
+      a i {
+        :first-child {
+          float: left;
+        }
+      }
+
+      .layui-icon-down {
+        width: @leftWidth - 105px;
+        margin-right: -10px;
+      }
+
+      .layui-nav-child {
+        :hover a {
+          color: @color;
+        }
+      }
+    }
+  }
+
+  .layui-side-scroll {
+    width: @leftWidth;
+  }
+}
+
+/*endregion*/
+
+
+/*region 右侧*/
+
+.right {
+  margin: 10px 20px 0 170px;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: auto;
+  padding: 50px 20px 100px;
+}
+
+.right > a > i {
+  margin-right: 5px;
+}
+
+.bform {
+  margin: 20px 30px 0 10px
+}
+
+.right .arz a {
+  color: #fff;
+  padding: 10px 18px;
+  background: #009688;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 2px
+}
+
+.right .arz a i {
+  position: relative;
+  right: 3px;
+  top: 1px
+}
+
+.right .arz {
+  margin: 20px 0 0 30px
+}
+
+.right .arz a:hover {
+  opacity: .8;
+  filter: alpha(opacity=80);
+  color: #fff
+}
+
+/*endregion*/
+
+/*region 关于选项*/
+
+#addOption_html .layui-form-item {
+  width: 95%;
+  margin: auto;
+}
+
+#addOption_html .layui-form-item:last-child {
+  margin-bottom: 20px;
+}
+
+#addOption_html .option .optionSelf {
+  width: 80%;
+}
+
+#addOption_html .option .optionSelf label {
+  width: 20%;
+}
+
+#addOption_html .option .optionSelf .layui-input-inline {
+  width: 70%;
+}
+
+#addOption_html .option .optionIsCorrect {
+  width: 10%;
+}
+
+/*endregion*/
+
+/*region 分页*/
+
+#pageDiv {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+#pageDiv li {
+  float: left;
+}
+
+#pageDiv li a, .page li span {
+  padding: 5px 10px;
+  background-color: #009688;
+  color: #FFF;
+  margin-right: 5px;
+  display: block;
+}
+
+#pageDiv li a:hover, #pageDiv li span {
+  background-color: #999;
+}
+
+/*endregion*/

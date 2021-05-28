@@ -1,0 +1,12 @@
+<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+<ul class="layui-nav layui-nav-tree" lay-filter="test">
+    <li class="layui-nav-item" v-for="vo,index in menu">
+        <a :href="vo.url">
+            <i class="layui-icon" v-html="vo.icon"></i>
+            <span v-text="vo.name"></span>
+        </a>
+        <dl class="layui-nav-child" v-for="vo2,index2 in vo.list">
+            <dd><a :href="vo2.url" :class="{active:vo2.active}" v-text="vo2.name"></a></dd>
+        </dl>
+    </li>
+</ul>

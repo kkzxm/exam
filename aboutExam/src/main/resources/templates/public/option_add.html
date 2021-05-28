@@ -1,0 +1,26 @@
+<fieldset class="layui-elem-field">
+  <legend th:text="|选项${i==null?'':i} :|"></legend>
+  <div class="layui-form-item option">
+    <div class="layui-inline optionSelf">
+      <label class="layui-form-label" for="optionSelf">选项内容:</label>
+      <div class="layui-input-inline">
+        <input type="text" name="optionSelf" id="optionSelf" autocomplete="off"
+               placeholder="请输入选项内容"
+               class="layui-input form-control">
+      </div>
+    </div>
+    <div class="layui-inline optionIsCorrect">
+      <label class="layui-form-label" style="display: none"></label>
+      <div class="layui-input-inline" style="width: auto">
+        <input type="checkbox" name="isCorrect" title="正确" th:value="${i}">
+      </div>
+    </div>
+  </div>
+  <div class="form-group layui-form-item layui-form-text">
+    <label class="layui-form-label" for="optionComment">请输入选项备注:</label>
+    <div class="layui-input-block">
+                    <textarea name="optionComment" id="optionComment" placeholder="请输入选项备注:"
+                              class="form-control layui-textarea"></textarea>
+    </div>
+  </div>
+</fieldset>

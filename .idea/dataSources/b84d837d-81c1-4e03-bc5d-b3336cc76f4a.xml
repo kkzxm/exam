@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="exam@localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.21">
+    <root id="1">
+      <ServerVersion>5.5.15</ServerVersion>
+      <DefaultCasing>lower/lower</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="exam">
+      <Current>1</Current>
+    </schema>
+    <schema id="3" parent="1" name="hrxy_dormitory"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="llf_english"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="test"/>
+    <table id="9" parent="2" name="answer"/>
+    <table id="10" parent="2" name="options"/>
+    <table id="11" parent="2" name="topic"/>
+    <view id="12" parent="2" name="answer_info">
+      <SourceTextLength>382</SourceTextLength>
+    </view>
+    <view id="13" parent="2" name="choice_question">
+      <SourceTextLength>381</SourceTextLength>
+    </view>
+    <view id="14" parent="2" name="multiple_choice_questions">
+      <SourceTextLength>465</SourceTextLength>
+    </view>
+    <view id="15" parent="2" name="single_choice_question">
+      <SourceTextLength>353</SourceTextLength>
+    </view>
+    <column id="16" parent="9" name="answer_id">
+      <Position>1</Position>
+      <Comment>答案Id</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="17" parent="9" name="answer_self">
+      <Position>2</Position>
+      <Comment>答案本身</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="18" parent="9" name="answer_comment">
+      <Position>3</Position>
+      <Comment>答案备注</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="19" parent="9" name="topic_id">
+      <Position>4</Position>
+      <Comment>归属题目(外键)</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="20" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>answer_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="21" parent="9" name="答案归属题目">
+      <ColNames>topic_id</ColNames>
+    </index>
+    <key id="22" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>answer_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="23" parent="9" name="答案归属题目">
+      <ColNames>topic_id</ColNames>
+      <RefTableName>topic</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>topic_id</RefColNames>
+    </foreign-key>
+    <column id="24" parent="10" name="option_id">
+      <Position>1</Position>
+      <Comment>选项Id</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="10" name="option_self">
+      <Position>2</Position>
+      <Comment>选项本身</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="26" parent="10" name="is_correct">
+      <Position>3</Position>
+      <Comment>该选项是否正确的</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="27" parent="10" name="topic_id">
+      <Position>4</Position>
+      <Comment>属于某个题目(外键)</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="28" parent="10" name="option_comment">
+      <Position>5</Position>
+      <Comment>选项备注</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="29" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>option_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="30" parent="10" name="归属题目">
+      <ColNames>topic_id</ColNames>
+    </index>
+    <key id="31" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>option_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="32" parent="10" name="归属题目">
+      <ColNames>topic_id</ColNames>
+      <RefTableName>topic</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>topic_id</RefColNames>
+    </foreign-key>
+    <column id="33" parent="11" name="topic_id">
+      <Position>1</Position>
+      <Comment>题目ID</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="34" parent="11" name="topic_self">
+      <Position>2</Position>
+      <Comment>题目本身</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="11" name="topic_type">
+      <Position>3</Position>
+      <Comment>题目类型</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="36" parent="11" name="topic_comment">
+      <Position>4</Position>
+      <Comment>题目备注</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="37" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>topic_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="38" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>topic_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="39" parent="12" name="answer_id">
+      <Position>1</Position>
+      <Comment>答案Id</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="40" parent="12" name="answer_self">
+      <Position>2</Position>
+      <Comment>答案本身</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="41" parent="12" name="answer_comment">
+      <Position>3</Position>
+      <Comment>答案备注</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="42" parent="12" name="topic_id">
+      <Position>4</Position>
+      <Comment>归属题目(外键)</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="43" parent="12" name="topic_self">
+      <Position>5</Position>
+      <Comment>题目本身</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="44" parent="12" name="topic_type">
+      <Position>6</Position>
+      <Comment>题目类型</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="45" parent="12" name="topic_comment">
+      <Position>7</Position>
+      <Comment>题目备注</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="46" parent="13" name="topic_id">
+      <Position>1</Position>
+      <Comment>题目ID</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="47" parent="13" name="topic_self">
+      <Position>2</Position>
+      <Comment>题目本身</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="13" name="topic_type">
+      <Position>3</Position>
+      <Comment>题目类型</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="49" parent="13" name="topic_comment">
+      <Position>4</Position>
+      <Comment>题目备注</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="50" parent="13" name="option_id">
+      <Position>5</Position>
+      <Comment>选项Id</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="51" parent="13" name="option_self">
+      <Position>6</Position>
+      <Comment>选项本身</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="52" parent="13" name="is_correct">
+      <Position>7</Position>
+      <Comment>该选项是否正确的</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="53" parent="13" name="option_comment">
+      <Position>8</Position>
+      <Comment>选项备注</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="54" parent="14" name="topic_id">
+      <Position>1</Position>
+      <Comment>题目ID</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="55" parent="14" name="topic_self">
+      <Position>2</Position>
+      <Comment>题目本身</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="14" name="topic_type">
+      <Position>3</Position>
+      <Comment>题目类型</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="57" parent="14" name="topic_comment">
+      <Position>4</Position>
+      <Comment>题目备注</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="58" parent="14" name="option_id">
+      <Position>5</Position>
+      <Comment>选项Id</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="59" parent="14" name="option_self">
+      <Position>6</Position>
+      <Comment>选项本身</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="60" parent="14" name="is_correct">
+      <Position>7</Position>
+      <Comment>该选项是否正确的</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="61" parent="14" name="option_comment">
+      <Position>8</Position>
+      <Comment>选项备注</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="62" parent="15" name="topic_id">
+      <Position>1</Position>
+      <Comment>题目ID</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="63" parent="15" name="topic_self">
+      <Position>2</Position>
+      <Comment>题目本身</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="15" name="topic_type">
+      <Position>3</Position>
+      <Comment>题目类型</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="65" parent="15" name="topic_comment">
+      <Position>4</Position>
+      <Comment>题目备注</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="66" parent="15" name="option_id">
+      <Position>5</Position>
+      <Comment>选项Id</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="67" parent="15" name="option_self">
+      <Position>6</Position>
+      <Comment>选项本身</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="68" parent="15" name="is_correct">
+      <Position>7</Position>
+      <Comment>该选项是否正确的</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="69" parent="15" name="option_comment">
+      <Position>8</Position>
+      <Comment>选项备注</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+  </database-model>
+</dataSource>

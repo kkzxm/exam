@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.exam.mapper.SingleChoiceQuestionMapper">
+    <!--region 结果集映射-->
+    <resultMap id="singleChoiceQuestion" type="com.ssm.exam.entity.choiceQuestion.SingleChoiceQuestion">
+        <result property="topic.topicId" column="topic_id"/>
+        <result property="topic.topicSelf" column="topic_self"/>
+        <result property="topic.topicType" column="topic_type"/>
+        <result property="topic.topicComment" column="topic_comment"/>
+        <collection property="optionsList" ofType="com.ssm.exam.entity.Options">
+            <result property="optionId" column="option_id"/>
+            <result property="optionSelf" column="option_self"/>
+            <result property="isCorrect" column="is_correct"/>
+            <result property="optionComment" column="option_comment"/>
+        </collection>
+    </resultMap>
+    <!--endregion-->
+    <select id="selectCount" resultType="Integer">
+        select count(*) from (select count(*) from single_choice_question group by topic_id) as scqc
+    </select>
+    <select id="selectMyPage" resultMap="singleChoiceQuestion">
+        select *
+        from (select * from topic where topic_type = 1 limit #{start},#{size}) tp
+                 left join options os on tp.topic_id = os.topic_id;
+    </select>
+    <select id="selectByOnly" resultMap="singleChoiceQuestion">
+        select topic_id, topic_self, topic_type, topic_comment
+        from single_choice_question
+    </select>
+</mapper>

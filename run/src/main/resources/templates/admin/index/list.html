@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head th:include="admin/adminPublic/headerLinks.html"><title></title></head>
+<body>
+<div id="app">
+    <header th:include="admin/adminPublic/adminHeader.html"></header>
+    <div class="main">
+
+        <div class="layui-side layui-bg-black left">
+            <div class="layui-side-scroll" th:include="admin/adminPublic/adminLeft.html"></div>
+        </div>
+
+        <div class="right">
+            <!--标题-->
+            <fieldset class="layui-elem-field layui-field-title">
+                <legend th:text="|${title} 列表:|"></legend>
+            </fieldset>
+            <!--面包屑导航-->
+            <span class="layui-breadcrumb" th:if="${partAddress!=null&&partAddress!='main'}">
+                <a th:href="@{/index}">首页</a>
+                <a th:href="|@{/}${partAddress}/toInsertPage|" th:text="|新增${title}|"></a>
+            </span>
+            <hr>
+            <!--列表-->
+            <div class="content-show" th:include="|${partAddress}_list.html|"></div>
+            <!--分页-->
+            <div class="page-limit" th:include="admin/adminPublic/adminLimit.html" th:if="${page!=null}"></div>
+        </div>
+    </div>
+</div>
+<link th:replace="admin/adminPublic/footerLinks.html">
+</body>
+</html>

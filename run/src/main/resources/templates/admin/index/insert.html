@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head th:include="admin/adminPublic/headerLinks.html"><title></title></head>
+<body>
+<div id="app">
+    <header th:include="admin/adminPublic/adminHeader.html"></header>
+    <div class="main">
+        <div class="left" th:include="admin/adminPublic/adminLeft.html"></div>
+        <div class="right">
+            <!--标题-->
+            <fieldset class="layui-elem-field layui-field-title">
+                <legend th:text="|新增 ${title}:|"></legend>
+            </fieldset>
+            <!--面包屑导航-->
+            <span class="layui-breadcrumb" th:if="${partAddress!=null&&partAddress!='main'}">
+                <a th:href="@{/index}">首页</a>
+                <a th:href="|@{/}${partAddress}/getPage|" th:text="|${title}列表|"></a>
+            </span>
+            <hr>
+            <!--表单-->
+            <form th:action="|@{/}${partAddress}/${path}|" th:method="POST"
+            class="layui-form layui-form-pane">
+                <div th:replace="|${partAddress}_add.html|"></div>
+                <div class="layui-form-item"><button class="layui-btn" lay-submit="" lay-filter="demo2">提交</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+<link th:replace="admin/adminPublic/footerLinks.html">
+</body>
+</html>

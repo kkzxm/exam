@@ -1,0 +1,24 @@
+ling-dream:
+  controller:
+    aspect: true
+    list-page: admin/index/list
+    insert-page: admin/index/insert
+    result-page: admin/index/result
+#开发环境
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/exam?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    password: 123456
+    username: root
+  thymeleaf:
+    cache: false
+
+server:
+  servlet:
+    context-path: /
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
